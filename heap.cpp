@@ -108,3 +108,4 @@ void visualHeap(int* &heap, int numelements){
       }
       
 }
+}
