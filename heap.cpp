@@ -24,7 +24,7 @@ for(int i = 0; i <= numelements; i++){
 
 int toStart = numelements/2;
 
-for(int a = toStart, a >=1, a--){
+for(int a = toStart; a >=1; a--){
   heapify(heap, numelements, a);
 }
 
