@@ -30,14 +30,14 @@ for(int a = toStart; a >=1; a--){
 
 printHeap(heap, numelements);     
 
-for(int b = numelements; b >= 1; b--){
+/*for(int b = numelements; b >= 1; b--){
     int temp = heap[1];
     heap[1] = heap[b];
     heap[b] = temp;
     heapify(heap, numelements, b);
 }
 
-printHeap(heap, numelements);     
+printHeap(heap, numelements);*/     
  
 }
 
