@@ -15,7 +15,7 @@ cin >> numelements;
 cin.get();
 cout << "please enter your elements below. press enter between each one" << endl;
 
-for(int i = 0; i <= numelements; i++){
+for(int i = 0; i <= numelements-1; i++){
       int input;
       cin >> input;
       cin.get();
