@@ -64,6 +64,7 @@ void heapify(int* &arr, int n, int i){
   }
   
   if(largest != i){
+    cout << "swap srart" << endl;
     int temp = arr[i];
     arr[i] = arr[largest];
     arr[largest] = temp;
