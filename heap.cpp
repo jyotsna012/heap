@@ -13,7 +13,7 @@ int* heap = new int[101];
 cout << "enter the number of elements you are inputting" << endl;
 cin >> numelements;
 cin.get();
-cout << "please enter your elements below. press enter between each one" << end;
+cout << "please enter your elements below. press enter between each one" << endl;
 
 for(int i = 0; i <= numelements; i++){
       int input;
