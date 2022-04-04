@@ -39,7 +39,7 @@ for(int b = numelements; b >= 1; b--){
 }
 
 printHeap(heap, numelements);  
-visualHeap(heap);
+visualHeap(heap, numelements);
  
 }
 
