@@ -5,7 +5,7 @@ using namespace std;
 
 void heapify(int* &arr, int n, int i);
 void printHeap(int* &arr, int n);
-void visualHeap(int* &heap);
+void visualHeap(int* &heap, int numelements);
 
 int main(){
 
@@ -80,7 +80,7 @@ void printHeap(int* &arr, int n)
  
 }
 
-void visualHeap(int* &heap){
+void visualHeap(int* &heap, int numelements){
       
       for(int i = 1; i <= numelements; i++){
             if(i <= 1){
