@@ -28,6 +28,8 @@ for(int a = toStart; a >=1; a--){
   heapify(heap, numelements, a);
 }
 
+printHeap(heap, numelements);     
+ 
 }
 
 void heapify(int* &arr, int n, int i){
