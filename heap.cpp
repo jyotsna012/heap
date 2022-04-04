@@ -45,7 +45,8 @@ for(int b = numelements; b >= 1; b--){
 }
 
 void heapify(int* &arr, int n, int i){
-
+  
+  cout << "Heap Start" << endl;
   int largest = i;
   cout << "largest: " << arr[largest] << endl;
   int left = 2 * i ;
@@ -68,7 +69,8 @@ void heapify(int* &arr, int n, int i){
     arr[largest] = temp;
     heapify(arr, n, largest);
   }
-  
+      
+  cout << "Heap End" << endl;
 }
 
 void printHeap(int* &arr, int n)
