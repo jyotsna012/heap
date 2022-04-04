@@ -29,7 +29,8 @@ for(int a = toStart; a >=1; a--){
   heapify(heap, numelements, a);
 }
 
-printHeap(heap, numelements);     
+printHeap(heap, numelements);   
+visualHeap(heap, numelements);
 
 for(int b = numelements; b >= 1; b--){
     int temp = heap[1];
@@ -38,9 +39,7 @@ for(int b = numelements; b >= 1; b--){
     heapify(heap, numelements, b);
 }
 
-printHeap(heap, numelements);  
-visualHeap(heap, numelements);
- 
+printHeap(heap, numelements);   
 }
 
 void heapify(int* &arr, int n, int i){
