@@ -39,7 +39,7 @@ for(int b = numelements; b >= 1; b--){
 }
 
 printHeap(heap, numelements);  
-void visualHeap(heap);
+visualHeap(heap);
  
 }
 
@@ -108,4 +108,4 @@ void visualHeap(int* &heap, int numelements){
       }
       
 }
-}
+
