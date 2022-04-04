@@ -5,6 +5,7 @@ using namespace std;
 
 void heapify(int* &arr, int n, int i);
 void printHeap(int* &arr, int n);
+void visualHeap(int* &heap);
 
 int main(){
 
@@ -37,7 +38,8 @@ for(int b = numelements; b >= 1; b--){
     heapify(heap, numelements, b);
 }
 
-printHeap(heap, numelements);     
+printHeap(heap, numelements);  
+void visualHeap(heap);
  
 }
 
@@ -78,6 +80,31 @@ void printHeap(int* &arr, int n)
  
 }
 
-void visualHeap(){
-
+void visualHeap(int* &heap){
+      
+      for(int i = 1; i <= numelements; i++){
+            if(i <= 1){
+                  cout << "" << heap[i] << endl;
+            }
+            else if(i > 1 && i <= 3){
+                  cout << "   " << heap[i] << endl;
+            }
+            else if(i > 3 && i <= 7){
+                  cout << "         " << heap[i] << endl;
+            }
+            else if(i > 7 && i <= 15){
+                  cout << "               " << heap[i] << endl;
+            }
+            else if(i > 15 && i <= 31){
+                  cout << "                     " << heap[i] << endl;
+            }
+            else if(i > 31 && i <= 63){
+                  cout << "                           " << heap[i] << endl;
+            }
+            else if(i > 63 && i <= 127){
+                  cout << "                                 " << heap[i] << endl;
+            }
+      
+      }
+      
 }
