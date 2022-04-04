@@ -105,6 +105,7 @@ void visualHeap(int* &heap, int numelements){
                   cout << "                                 " << heap[i] << endl;
             }
       }
+}
       
       /* for(int a = 1; a <=numelements; a++){
           if(heapSecond[a][1] == 1){
