@@ -35,8 +35,12 @@ printHeap(heap, numelements);
 void heapify(int* &arr, int n, int i){
 
   int largest = i;
+  cout << "largest: " << arr[largest] << endl;
   int left = 2 * i ;
+  cout << "left: " << arr[left] << endl;
   int right = 2 * i + 1;
+  cout << "right: " << arr[right] << endl;
+
   
   while(left <= n && arr[left] > arr[largest]){
     largest = left; 
