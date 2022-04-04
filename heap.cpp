@@ -28,11 +28,11 @@ for(int a = toStart; a >=1; a--){
   heapify(heap, numelements, a);
 }
 
-for(int b = n; b >= 1; b--){
-    int temp = arr[1];
-    arr[1] = arr[b];
-    arr[b] = temp;
-    heapify(arr, n, b);
+for(int b = numelements; b >= 1; b--){
+    int temp = heap[1];
+    heap[1] = heap[b];
+    heap[b] = temp;
+    heapify(heap, numelements, b);
 }
 
 printHeap(heap, numelements);     
