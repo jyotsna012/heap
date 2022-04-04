@@ -51,8 +51,7 @@ void heapify(int* &arr, int n, int i){
   }
   
   if(largest != i){
-    int temp;
-    arr[i] = temp;
+    int temp = arr[i];
     arr[i] = arr[largest];
     arr[largest] = temp;
     heapify(arr, n, largest);
