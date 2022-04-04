@@ -33,6 +33,7 @@ printHeap(heap, numelements);
 visualHeap(heap, numelements);
 
 for(int b = numelements; b >= 1; b--){
+    cout << "swap srart" << endl;
     int temp = heap[1];
     heap[1] = heap[b];
     heap[b] = temp;
@@ -64,7 +65,6 @@ void heapify(int* &arr, int n, int i){
   }
   
   if(largest != i){
-    cout << "swap srart" << endl;
     int temp = arr[i];
     arr[i] = arr[largest];
     arr[largest] = temp;
