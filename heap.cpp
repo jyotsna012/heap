@@ -15,11 +15,11 @@ cin >> numelements;
 cin.get();
 cout << "please enter your elements below. press enter between each one" << endl;
 
-for(int i = 0; i <= numelements-1; i++){
+for(int i = 1; i <= numelements; i++){
       int input;
       cin >> input;
       cin.get();
-      heap[i+1] = input;
+      heap[i] = input;
     }
 
 int toStart = numelements/2;
@@ -60,7 +60,13 @@ void printHeap(int* &arr, int n)
 {
     cout << "Array \n";
  
-    for (int i = 1; i < n; i++)
-        cout << arr[i] << " ";
-    cout << "\n";
+    //for (int i = 1; i < n; i++)
+        //cout << arr[i] << " ";
+    //cout << "\n";
+      
+    cout << arr[1] << endl;
+    cout << arr[2] << endl;
+    cout << arr[3] << endl;
+    cout << arr[4] << endl;
+    cout << arr[5] << endl;   
 }
