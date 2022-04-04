@@ -72,13 +72,12 @@ void printHeap(int* &arr, int n)
 {
     cout << "Array \n";
  
-    //for (int i = 1; i < n; i++)
-        //cout << arr[i] << " ";
-    //cout << "\n";
-      
-    cout << arr[1] << endl;
-    cout << arr[2] << endl;
-    cout << arr[3] << endl;
-    cout << arr[4] << endl;
-    cout << arr[5] << endl;   
+    for (int i = 1; i < n; i++)
+        cout << arr[i] << " ";
+    cout << "\n";
+ 
+}
+
+void visualHeap(){
+
 }
