@@ -22,7 +22,9 @@ for(int i = 0; i <= numelements; i++){
       heap[i+1] = input;
     }
 
-for(int a = (numelements/2), a >=1, a--){
+int toStart = numelements/2;
+
+for(int a = toStart, a >=1, a--){
   heapify(heap, numelements, a);
 }
 
