@@ -28,6 +28,8 @@ for(int a = toStart; a >=1; a--){
   heapify(heap, numelements, a);
 }
 
+printHeap(heap, numelements);     
+
 for(int b = numelements; b >= 1; b--){
     int temp = heap[1];
     heap[1] = heap[b];
