@@ -103,7 +103,7 @@ void printOrderedHeap(int* &orderedheap, int n){
     cout << "Ordered Array \n";
  
     for (int i = 0; i < n; i++)
-        cout << orderedheap[i] << " ";
+        cout << heap[i] << " ";
     cout << "\n";
 }
 
