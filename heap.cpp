@@ -7,6 +7,7 @@ void heapify(int* &arr, int n, int i);
 void printHeap(int* &arr, int n);
 void visualHeap(int* &heap, int numelements);
 void addtoheap(int &a, int temp, int* &orderedheap);
+void printOrderedHeap(int* &orderedheap, int n);
 
 int main(){
 
@@ -45,7 +46,7 @@ for(int b = numelements; b >= 1; b--){
 }
 
 
-  printHeap(heap, numelements); 
+  printOrderedHeap(orderedheap, numelements); 
     
 }
 
@@ -95,6 +96,15 @@ void addtoheap(int &a, int temp, int* &orderedheap){
       orderedheap[a] = temp;
       a++;
 }
+
+void printOrderedHeap(int* &orderedheap, int n){
+    cout << "Ordered Array \n";
+ 
+    for (int i = 1; i <= n; i++)
+        cout << arr[i] << " ";
+    cout << "\n";
+}
+
 
 void visualHeap(int* &heap, int numelements){
       for(int i = 1; i <= numelements; i++){
