@@ -40,7 +40,8 @@ for(int b = numelements; b >= 1; b--){
     int temp = heap[1];
     heap[1] = heap[b];
     heap[b] = 0;
-    addtoheap(a, temp, orderedheap);    
+    addtoheap(a, temp, orderedheap);  
+    numelements = numelements - 1;
     cout << "remove swaped(top, b): " << heap[1] << " and " << temp << endl;
     heapify(heap, numelements, numelements/2);
 }
