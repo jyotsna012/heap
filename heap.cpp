@@ -36,7 +36,7 @@ for(int b = numelements; b >= 1; b--){
     int temp = heap[1];
     heap[1] = heap[b];
     heap[b] = temp;
-    cout << "swaped: " << heap[1] << beap[b] << endl;
+    cout << "swaped: " << heap[1] << heap[b] << endl;
     heapify(heap, numelements, b);
 }
 
