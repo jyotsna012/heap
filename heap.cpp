@@ -86,7 +86,7 @@ void printHeap(int* &arr, int n)
 {
     cout << "Array \n";
  
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i <= n; i++)
         cout << arr[i] << " ";
     cout << "\n";
  
@@ -101,7 +101,7 @@ void addtoheap(int &a, int temp, int* &orderedheap){
 void printOrderedHeap(int* &orderedheap, int n){
     cout << "Ordered Array \n";
  
-    for (int i = 1; i <= n; i++)
+    for (int i = 0; i < n; i++)
         cout << orderedheap[i] << " ";
     cout << "\n";
 }
