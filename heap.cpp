@@ -42,7 +42,7 @@ for(int b = numelements; b >= 1; b--){
     heap[b] = 0;
     addtoheap(a, temp, orderedheap);    
     cout << "remove swaped(top, b): " << heap[1] << " and " << temp << endl;
-    heapify(heap, numelements, b);
+    heapify(heap, numelements, b-1);
 }
 
 
