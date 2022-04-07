@@ -43,6 +43,7 @@ for(int b = numelements; b >= 1; b--){
     addtoheap(a, temp, orderedheap);  
     numelements = numelements - 1;
     cout << "remove swaped(top, b): " << heap[1] << " and " << temp << endl;
+    cout << "numelements " << numelements << endl;
     heapify(heap, numelements, numelements/2);
 }
 
