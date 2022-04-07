@@ -43,7 +43,6 @@ for(int b = numelements; b >= 1; b--){
     addtoheap(a, temp, orderedheap);  
     numelements = numelements - 1;
     cout << "remove swaped(top, b): " << heap[1] << " and " << temp << endl;
-    cout << "numelements " << numelements << endl;
     heapify(heap, numelements, numelements/2);
 }
 
@@ -134,34 +133,3 @@ void visualHeap(int* &heap, int numelements){
             }
       }
 }
-      
-      /* for(int a = 1; a <=numelements; a++){
-          if(heapSecond[a][1] == 1){
-             for(int b = 0; b <= (numelements + 1)/2; b++){
-                  cout << endl;
-             }
-          }
-          if(heapSecond[a][1] == 2){
-              for(int b = 0; b <= (numelements + 1)/2; b++){
-                  cout << endl;
-             }
-          }
-          if(heapSecond[a][1] == 3){
-          
-          }
-          if(heapSecond[a][1] == 4){
-          
-          }
-          if(heapSecond[a][1] == 5){
-          
-          }
-          if(heapSecond[a][1] == 6){
-          
-          }
-          if(heapSecond[a][1] == 7){
-          
-          }
-
-      } */
-
-
