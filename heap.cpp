@@ -6,7 +6,7 @@ using namespace std;
 void heapify(int* &arr, int n, int i);
 void printHeap(int* &arr, int n);
 void visualHeap(int* &heap, int numelements);
-void addtoheap(&a, temp, int* &orderedheap);
+void addtoheap(int &a, int temp, int* &orderedheap);
 
 int main(){
 
@@ -91,7 +91,7 @@ void printHeap(int* &arr, int n)
  
 }
 
-void addtoheap(&a, temp, int* &orderedheap){
+void addtoheap(int &a, int temp, int* &orderedheap){
       orderedheap[a] = temp;
       a++
 }
