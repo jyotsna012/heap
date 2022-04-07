@@ -93,7 +93,7 @@ void printHeap(int* &arr, int n)
 
 void addtoheap(int &a, int temp, int* &orderedheap){
       orderedheap[a] = temp;
-      a++
+      a++;
 }
 
 void visualHeap(int* &heap, int numelements){
