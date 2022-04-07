@@ -33,10 +33,10 @@ printHeap(heap, numelements);
 visualHeap(heap, numelements);
 
 for(int b = numelements; b >= 1; b--){
-    cout << "swap srart" << endl;
     int temp = heap[1];
     heap[1] = heap[b];
     heap[b] = temp;
+    cout << "swaped: " << heap[1] << beap[b] << endl;
     heapify(heap, numelements, b);
 }
 
