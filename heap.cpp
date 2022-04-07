@@ -93,7 +93,7 @@ void printHeap(int* &arr, int n)
 }
 
 void addtoheap(int &a, int temp, int* &orderedheap){
-      cout << temp << "The number that was added to the ordered heap is: " << endl;
+      cout << temp << " - The number that was added to the ordered heap is: " << endl;
       orderedheap[a] = temp;
       a++;
 }
