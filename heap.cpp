@@ -36,7 +36,7 @@ for(int b = numelements; b >= 1; b--){
     int temp = heap[1];
     heap[1] = heap[b];
     heap[b] = temp;
-    cout << "swaped: " << heap[1] << heap[b] << endl;
+    cout << "remove swaped(top, b): " << heap[1] << "and" << heap[b] << endl;
     heapify(heap, numelements, b);
 }
 
@@ -49,7 +49,7 @@ void heapify(int* &arr, int n, int i){
   
   cout << "Heap Start" << endl;
   int largest = i;
-  cout << "largest: " << arr[largest] << endl;
+  cout << "i value: " << arr[largest] << endl;
   int left = 2 * i ;
   cout << "left: " << arr[left] << endl;
   int right = 2 * i + 1;
@@ -65,6 +65,9 @@ void heapify(int* &arr, int n, int i){
   }
   
   if(largest != i){
+    cout << "largest index: " << largest << endl;
+    cout << "input: index " << i << endl;
+    cout << "heap swaped(i, largest): " << arr[i] << "and" << arr[largest] << endl;
     int temp = arr[i];
     arr[i] = arr[largest];
     arr[largest] = temp;
