@@ -6,11 +6,14 @@ using namespace std;
 void heapify(int* &arr, int n, int i);
 void printHeap(int* &arr, int n);
 void visualHeap(int* &heap, int numelements);
+void addtoheap(&a, temp, int* &orderedheap);
 
 int main(){
 
 int numelements = 0;
+int a = 0;
 int* heap = new int[101];
+int* orderedheap = new int[101];
 cout << "enter the number of elements you are inputting" << endl;
 cin >> numelements;
 cin.get();
@@ -35,8 +38,9 @@ visualHeap(heap, numelements);
 for(int b = numelements; b >= 1; b--){
     int temp = heap[1];
     heap[1] = heap[b];
-    heap[b] = temp;
-    cout << "remove swaped(top, b): " << heap[1] << "and" << heap[b] << endl;
+    heap[b] = 0;
+    addtoheap(a, temp, orderedheap);    
+    cout << "remove swaped(top, b): " << heap[1] << " and " << temp << endl;
     heapify(heap, numelements, b);
 }
 
@@ -85,6 +89,11 @@ void printHeap(int* &arr, int n)
         cout << arr[i] << " ";
     cout << "\n";
  
+}
+
+void addtoheap(&a, temp, int* &orderedheap){
+      orderedheap[a] = temp;
+      a++
 }
 
 void visualHeap(int* &heap, int numelements){
