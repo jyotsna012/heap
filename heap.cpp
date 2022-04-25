@@ -19,7 +19,7 @@ cout << "enter the number of elements you are inputting" << endl;
 cin >> numelements;
 cin.get();
 cout << "please enter your elements below. press enter between each one" << endl;
-cout<< "ne: 0: " << numelements << endl;
+cout<< "NUMELEMENTS0: " << numelements << endl;
       
      
 for(int i = 1; i <= numelements; i++){
@@ -35,12 +35,12 @@ for(int a = toStart; a >=1; a--){
   heapify(heap, numelements, a);
 }
       
-cout<< "ne: 1: " << numelements << endl;
+cout<< "NUMELEMENTS1: " << numelements << endl;
 
 printHeap(heap, numelements);   
 visualHeap(heap, numelements);
 
-cout<< "ne: 2: " << numelements << endl;
+cout<< "NUMELEMENTS2: " << numelements << endl;
 for(int b = numelements; b >= 1; b--){
     int temp = heap[1];
     heap[1] = heap[b];
@@ -51,7 +51,7 @@ for(int b = numelements; b >= 1; b--){
     heapify(heap, numelements, numelements/2);
 }
 
-  cout<< "ne: 3: " << numelements << endl;
+  cout<< "NUMELEMENTS3: " << numelements << endl;
   printOrderedHeap(orderedheap, numelements); 
     
 }
