@@ -101,6 +101,8 @@ void addtoheap(int &a, int temp, int* &orderedheap){
 
 void printOrderedHeap(int* &orderedheap, int n){
     cout << "Ordered Array \n";
+    cout << n << endl;
+    cout << orderedheap[0] << endl;
  
     for (int i = 0; i < n; i++)
         cout << orderedheap[i] << " ";
