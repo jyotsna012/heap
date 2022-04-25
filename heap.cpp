@@ -36,7 +36,7 @@ for(int a = toStart; a >=1; a--){
 }
       
 printHeap(heap, numelements);   
-visualHeap(heap, numelements);
+//visualHeap(heap, numelements);
 
 int numelements2 = numelements;
 for(int b = numelements2; b >= 0; b--){
