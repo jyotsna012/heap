@@ -40,9 +40,8 @@ cout<< "NUMELEMENTS1: " << numelements << endl;
 printHeap(heap, numelements);   
 visualHeap(heap, numelements);
 
-cout<< "NUMELEMENTS2: " << numelements << endl;
 int numelements2 = numelements;
-for(int b = numelements2; b >= 1; b--){
+for(int b = numelements2; b >= 0; b--){
     int temp = heap[1];
     heap[1] = heap[b];
     heap[b] = 0;
@@ -52,7 +51,6 @@ for(int b = numelements2; b >= 1; b--){
     heapify(heap, numelements2, numelements2/2);
 }
 
-  cout<< "NUMELEMENTS3: " << numelements << endl;
   printOrderedHeap(orderedheap, numelements); 
     
 }
@@ -100,15 +98,13 @@ void printHeap(int* &arr, int n)
 }
 
 void addtoheap(int &a, int temp, int* &orderedheap){
-      cout << temp << " - The number that was added to the ordered heap is: " << "the a value is: " << a << endl;
+      cout << "The number that was added to the ordered heap is: " << temp << " the a value is: " << a << endl;
       orderedheap[a] = temp;
       a++;
 }
 
 void printOrderedHeap(int* &orderedheap, int n){
     cout << "Ordered Array \n";
-    cout << n << endl;
-    cout << orderedheap[0] << endl;
  
     for (int i = 0; i < n; i++)
         cout << orderedheap[i] << " ";
