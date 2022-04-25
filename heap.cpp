@@ -46,8 +46,9 @@ for(int b = numelements2; b >= 0; b--){
     addtoheap(a, temp, orderedheap);  
     numelements2 = numelements2 - 1;
     //cout << "remove swaped(top, b): " << heap[1] << " and " << temp << endl;
-    printHeap(heap, numelements);   
     heapify(heap, numelements2, numelements2/2);
+    printHeap(heap, numelements);   
+
 }
 
   printOrderedHeap(orderedheap, numelements); 
