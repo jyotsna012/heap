@@ -39,7 +39,7 @@ printHeap(heap, numelements);
 //visualHeap(heap, numelements);
 
 int numelements2 = numelements;
-for(int b = 1; b <= numelements2; b--){
+for(int b = 1; b <= numelements2; b++){
     int temp = heap[1];
     heap[1] = NULL;
     //heap[b] = 0;
