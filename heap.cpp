@@ -5,7 +5,7 @@ using namespace std;
 
 void heapify(int* &arr, int n, int i);
 void printHeap(int* &arr, int n);
-void visualHeap(int* &heap, int numelements);
+void visualHeap(int* &heap, int numelements)
 void addtoheap(int &a, int temp, int* &orderedheap);
 void printOrderedHeap(int* &orderedheap, int n);
 
