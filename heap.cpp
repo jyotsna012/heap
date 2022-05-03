@@ -43,7 +43,7 @@ int numelements3 = numelements;
 for(int b = 1; b <= numelements2; b++){
     int temp = heap[1];
     addtoheap(a, temp, orderedheap);  
-    heap[1] = temp - 1;
+    heap[1] = 0;
     cout << "v 1" << endl;
     printHeap(heap, numelements);   
     //numelements2 = numelements2 - 1;
