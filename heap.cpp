@@ -65,20 +65,20 @@ void heapify(int* &arr, int n, int i){
   int left = 2 * i + 1;
   int right = 2 * i + 2;
   
-  while(left <= n && arr[left] < arr[smallest]){
+  if(left <= n && arr[left] < arr[smallest]){
     smallest = left; 
   }
   
-  while(right <= n && arr[right] > arr[largest]){
-      largest = right; 
+  if(right <= n && arr[right] < arr[smallest]){
+      smallest = right; 
   }
   
-  if(largest != i){
-    int temp = arr[i];
-    arr[i] = arr[largest];
-    arr[largest] = temp;
-    heapify(arr, n, largest);
-  }
+     if (smallest != i) {
+        int temp = arr[i];
+        arr[i] = arr[smallest];
+        arr[smallest] = temp; 
+        heapify(arr, n, smallest);
+    }
 }
 
 void printHeap(int* &arr, int n)
