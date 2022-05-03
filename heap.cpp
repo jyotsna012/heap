@@ -41,7 +41,7 @@ printHeap(heap, numelements);
 int numelements2 = numelements;
 for(int b = numelements2; b >= 1; b--){
     int temp = heap[1];
-    heap[1] = 0;
+    heap[1] = NULL;
     //heap[b] = 0;
     addtoheap(a, temp, orderedheap);  
     numelements2 = numelements2 - 1;
