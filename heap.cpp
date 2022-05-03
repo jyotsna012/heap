@@ -34,7 +34,7 @@ int toStart = numelements/2;
 for(int a = toStart; a >=1; a--){
   heapify(heap, numelements, a);
 }
-      
+cout << "ori" <<endl;       
 printHeap(heap, numelements);   
 //visualHeap(heap, numelements);
 
