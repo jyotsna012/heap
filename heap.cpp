@@ -61,12 +61,12 @@ for(int b = numelements2; b >= 1; b--){
 
 void heapify(int* &arr, int n, int i){
   
-  int largest = i;
-  int left = 2 * i ;
-  int right = 2 * i + 1;
+  int smallest = i;
+  int left = 2 * i + 1;
+  int right = 2 * i + 2;
   
-  while(left <= n && arr[left] > arr[largest]){
-    largest = left; 
+  while(left <= n && arr[left] < arr[smallest]){
+    smallest = left; 
   }
   
   while(right <= n && arr[right] > arr[largest]){
@@ -95,41 +95,6 @@ void addtoheap(int &a, int temp, int* &orderedheap){
       //cout << "The number that was added to the ordered heap is: " << temp << " the a value is: " << a << endl;
       orderedheap[a] = temp;
       a++;
-}
-
-void printOrderedHeap(int* &orderedheap, int n){
-    cout << "Ordered Array \n";
- 
-    for (int i = 0; i < n; i++)
-        cout << orderedheap[i] << " ";
-    cout << "\n";
-}
-
-
-void visualHeap(int* &heap, int numelements){
-      for(int i = 1; i <= numelements; i++){
-            if(i <= 1){
-                  cout << "" << heap[i] << endl;
-            }
-            else if(i > 1 && i <= 3){
-                  cout << "   " << heap[i] << endl;
-            }
-            else if(i > 3 && i <= 7){
-                  cout << "         " << heap[i] << endl;
-            }
-            else if(i > 7 && i <= 15){
-                  cout << "               " << heap[i] << endl;
-            }
-            else if(i > 15 && i <= 31){
-                  cout << "                     " << heap[i] << endl;
-            }
-            else if(i > 31 && i <= 63){
-                  cout << "                           " << heap[i] << endl;
-            }
-            else if(i > 63 && i <= 127){
-                  cout << "                                 " << heap[i] << endl;
-            }
-      }
 }
 
 void heapSort(int* &arr, int n)
