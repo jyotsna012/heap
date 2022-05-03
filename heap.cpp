@@ -39,14 +39,12 @@ printHeap(heap, numelements);
 //visualHeap(heap, numelements);
 
 int numelements2 = numelements;
-int numelements3 = numelements;
-for(int b = 1; b <= numelements2; b++){
+for(int b = numelements2; b >= 0; b--){
     int temp = heap[1];
+    heap[1] = heap[b];
+    heap[b] = 0;
     addtoheap(a, temp, orderedheap);  
-    heap[1] = 0;
-    cout << "v 1" << endl;
-    printHeap(heap, numelements);   
-    //numelements2 = numelements2 - 1;
+    numelements2 = numelements2 - 1;
     //cout << "remove swaped(top, b): " << heap[1] << " and " << temp << endl;
     heapify(heap, numelements2, numelements2/2);
     printHeap(heap, numelements);   
