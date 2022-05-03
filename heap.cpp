@@ -97,9 +97,9 @@ void heapSort(int* &arr, int n)
         heapify(arr, n, i);
  
     for (int i = n - 1; i >= 0; i--) {
-        // Move current root to end
-        swap(arr[0], arr[i]);
- 
+        int temp = arr[0];
+        arr[i] = arr[0];
+        arr[0] = temp;  
         heapify(arr, i, 0);
     }
 }
