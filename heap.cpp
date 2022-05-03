@@ -52,6 +52,8 @@ for(int b = numelements2; b >= 1; b--){
 
 }*/
   heapSort(heap, numelements);
+  cout << "end" <<endl;       
+  printHeap(heap, numelements);   
 
   //printOrderedHeap(orderedheap, numelements); 
     
