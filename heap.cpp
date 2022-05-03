@@ -91,24 +91,15 @@ void printHeap(int* &arr, int n)
  
 }
 
-void addtoheap(int &a, int temp, int* &orderedheap){
-      //cout << "The number that was added to the ordered heap is: " << temp << " the a value is: " << a << endl;
-      orderedheap[a] = temp;
-      a++;
-}
-
 void heapSort(int* &arr, int n)
 {
-    // Build heap (rearrange array)
     for (int i = n / 2 - 1; i >= 0; i--)
         heapify(arr, n, i);
  
-    // One by one extract an element from heap
     for (int i = n - 1; i >= 0; i--) {
         // Move current root to end
         swap(arr[0], arr[i]);
  
-        // call min heapify on the reduced heap
         heapify(arr, i, 0);
     }
 }
