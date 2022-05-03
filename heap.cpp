@@ -39,12 +39,11 @@ printHeap(heap, numelements);
 //visualHeap(heap, numelements);
 
 int numelements2 = numelements;
+int numelements3 = numelements;
 for(int b = 1; b <= numelements2; b++){
     int temp = heap[1];
-    heap[1] = NULL;
-    //heap[b] = 0;
     addtoheap(a, temp, orderedheap);  
-    numelements2 = numelements2 - 1;
+    //numelements2 = numelements2 - 1;
     //cout << "remove swaped(top, b): " << heap[1] << " and " << temp << endl;
     heapify(heap, numelements2, numelements2/2);
     printHeap(heap, numelements);   
