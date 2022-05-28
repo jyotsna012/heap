@@ -38,7 +38,7 @@ cin.get();
 		File.open("numbers.txt");
 
 		int n = 0;
-		while (n <= numelements) {
+		while (n < numelements) {
    		File >> heap[n];
    		n++;
 		}
@@ -46,7 +46,7 @@ cin.get();
      		} 
 	
 cout << "here are the numbers in the heap" << endl;
-for(int b = 0; b <= numelements; b++){
+for(int b = 0; b < numelements; b++){
 	cout << heap[b] << endl;
 }
      
