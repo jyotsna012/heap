@@ -46,7 +46,7 @@ for(int b = 1; b <= numelements; b++){
 
     int start = (numelements/2)-1;
     for (int k = start; k >= 0; k--) {
-        heapify(arr, numelements, k);
+        heapify(heap, numelements, k);
     }
      
    cout << "Heap" << endl;
