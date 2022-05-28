@@ -45,7 +45,8 @@ cin.get();
 		File.close();
      		} 
 	
-for(int b = 1; b <= numelements; b++){
+cout << "here are the numbers in the heap" << endl;
+for(int b = 0; b <= numelements; b++){
 	cout << heap[b] << endl;
 }
      
