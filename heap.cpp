@@ -1,6 +1,8 @@
+#include <cstdlib>
 #include <iostream>
 #include <cstring>
 #include <fstream>
+#include <string>
 
 using namespace std;
 
