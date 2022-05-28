@@ -39,7 +39,7 @@ cin.get();
 
 		int n = 0;
 		while (n <= numelements) {
-   		File >> arr[n];
+   		File >> heap[n];
    		n++;
 		}
 		File.close();
