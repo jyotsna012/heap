@@ -37,7 +37,7 @@ cin.get();
       	 ifstream File;
 		File.open("numbers.txt");
 	        for(int n = 1; n <= numelements; n++){
-		File >> heap[n]
+		File >> heap[n];
    		n++;
 		}
 		File.close();
