@@ -22,7 +22,7 @@ cin >> option;
 cin.get();
      if(option == 1){
           cout << "please enter your elements below. press enter between each one" << endl;       
-          for(int i = 1; i <= numelements; i++){
+          for(int i = 0; i < numelements; i++){
                int input;
                cin >> input;
                cin.get();
@@ -31,8 +31,8 @@ cin.get();
        } else if(option == 2){
 		ifstream myFile;
 		myFile.open("numbers.txt");
-		int g = 1;
-		while (g <= numelements) {
+		int g = 0;
+		while (g < numelements) {
    		myFile >> heap[g];
    		g++;
 		}
@@ -40,12 +40,12 @@ cin.get();
      		} 
 	
 cout << "here are the numbers in the heap" << endl;
-for(int b = 1; b <= numelements; b++){
+for(int b = 0; b < numelements; b++){
 	cout << heap[b] << endl;
 }
 
     int start = (numelements/2)-1;
-    for (int k = start; k >= 1; k--) {
+    for (int k = start; k >= 0; k--) {
         heapify(heap, numelements, k);
     }
      
