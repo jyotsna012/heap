@@ -34,17 +34,13 @@ cin.get();
                heap[i] = input;
           }  
        } else if(option == 2){
-      	 fstream myFile;
-	    myFile.open("numbers.txt", ios::in);
-	    if(myFile.is_open()){
-          	for(int i = 1; i <= numelements; i++){
-               	int input;
-               	myFile >> input;
-               	myFile.get();
-               	heap[i] = input;
-                }  
-		myFile.close();
-	    }          
+      	 ifstream File;
+		File.open("numbers.txt");
+	        for(int n = 1; n <= numelements; n++){
+		File >> heap[n]
+   		n++;
+		}
+		File.close();
      } 
 	
 for(int b = 1; b <= numelements; b++){
