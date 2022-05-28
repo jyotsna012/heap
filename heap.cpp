@@ -20,17 +20,16 @@ cin >> numelements;
 cin.get();
 cout << "please enter your elements below. press enter between each one" << endl;
 cout<< "NUMELEMENTS0: " << numelements << endl;
-
-}
      
-/*for(int i = 1; i <= numelements; i++){
+for(int i = 1; i <= numelements; i++){
       int input;
       cin >> input;
       cin.get();
       heap[i] = input;
-    }
+    }    
+}
 
-int toStart = numelements/2;
+/*int toStart = numelements/2;
 
 for(int a = toStart; a >=1; a--){
   heapify(heap, numelements, a);
