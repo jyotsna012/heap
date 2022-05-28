@@ -5,7 +5,7 @@
 #include <string>
 
 using namespace std;
-void heap(int* &heap, int n, int i);
+void heapify(int* &heap, int n, int i);
 
 int main(){
 
@@ -46,7 +46,7 @@ for(int b = 1; b <= numelements; b++){
      
 }
 
-void heap(int* &heap, int n, int i)
+void heapify(int* &heap, int n, int i)
 {
     int largest = i; 
     int left = (2*i)+1; 
