@@ -37,8 +37,8 @@ cin.get();
 		ifstream File;
 		File.open("numbers.txt");
 
-		int n = 0;
-		while (n < numelements) {
+		int n = 1;
+		while (n <= numelements) {
    		File >> heap[n];
    		n++;
 		}
