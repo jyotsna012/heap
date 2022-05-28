@@ -3,11 +3,11 @@
 
 using namespace std;
 
-void heapify(int* &arr, int n, int i);
+/* void heapify(int* &arr, int n, int i);
 void printHeap(int* &arr, int n);
 void visualHeap(int* &heap, int numelements)
 void addtoheap(int &a, int temp, int* &orderedheap);
-void printOrderedHeap(int* &orderedheap, int n);
+void printOrderedHeap(int* &orderedheap, int n); */
 
 int main(){
 
@@ -20,9 +20,10 @@ cin >> numelements;
 cin.get();
 cout << "please enter your elements below. press enter between each one" << endl;
 cout<< "NUMELEMENTS0: " << numelements << endl;
-      
+
+}
      
-for(int i = 1; i <= numelements; i++){
+/*for(int i = 1; i <= numelements; i++){
       int input;
       cin >> input;
       cin.get();
@@ -109,4 +110,4 @@ void printOrderedHeap(int* &orderedheap, int n){
     for (int i = 0; i < n; i++)
         cout << orderedheap[i] << " ";
     cout << "\n";
-}
+}*/
