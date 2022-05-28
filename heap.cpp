@@ -5,12 +5,7 @@
 #include <string>
 
 using namespace std;
-
-/* void heapify(int* &arr, int n, int i);
-void printHeap(int* &arr, int n);
-void visualHeap(int* &heap, int numelements)
-void addtoheap(int &a, int temp, int* &orderedheap);
-void printOrderedHeap(int* &orderedheap, int n); */
+void heap(int* &heap, int n, int i);
 
 int main(){
 
@@ -34,15 +29,14 @@ cin.get();
                heap[i] = input;
           }  
        } else if(option == 2){
-		ifstream File;
-		File.open("numbers.txt");
-
-		int n = 1;
-		while (n <= numelements) {
-   		File >> heap[n];
-   		n++;
+		ifstream myFile;
+		myFile.open("numbers.txt");
+		int g = 1;
+		while (g <= numelements) {
+   		myFile >> heap[g];
+   		g++;
 		}
-		File.close();
+		myFile.close();
      		} 
 	
 cout << "here are the numbers in the heap" << endl;
@@ -52,86 +46,23 @@ for(int b = 1; b <= numelements; b++){
      
 }
 
-
-
-/*int toStart = numelements/2;
-
-for(int a = toStart; a >=1; a--){
-  heapify(heap, numelements, a);
-}
-      
-printHeap(heap, numelements);   
-//visualHeap(heap, numelements);
-
-int numelements2 = numelements;
-for(int b = numelements2; b >= 0; b--){
-    int temp = heap[1];
-    heap[1] = heap[b];
-    heap[b] = 0;
-    addtoheap(a, temp, orderedheap);  
-    numelements2 = numelements2 - 1;
-    //cout << "remove swaped(top, b): " << heap[1] << " and " << temp << endl;
-    heapify(heap, numelements2, numelements2/2);
-    printHeap(heap, numelements);   
-
-}
-
-  printOrderedHeap(orderedheap, numelements); 
-    
-}
-
-void heapify(int* &arr, int n, int i){
-  
-  //cout << "Heap Start" << endl;
-  int largest = i;
- // cout << "i value: " << arr[largest] << endl;
-  int left = 2 * i ;
- // cout << "left: " << arr[left] << endl;
-  int right = 2 * i + 1;
-  //cout << "right: " << arr[right] << endl;
-
-  
-  while(left <= n && arr[left] > arr[largest]){
-    largest = left; 
-  }
-  
-  while(right <= n && arr[right] > arr[largest]){
-      largest = right; 
-  }
-  
-  if(largest != i){
-    //cout << "largest index: " << largest << endl;
-    //cout << "input: index " << i << endl;
-    //cout << "heap swaped(i, largest): " << arr[i] << "and" << arr[largest] << endl;
-    int temp = arr[i];
-    arr[i] = arr[largest];
-    arr[largest] = temp;
-    heapify(arr, n, largest);
-  }
-      
-  //cout << "Heap End" << endl;
-}
-
-void printHeap(int* &arr, int n)
+void heap(int* &heap, int n, int i)
 {
-    cout << "Array \n";
+    int largest = i; 
+    int left = (2*i)+1; 
+    int right = (2*i)+2; 
+	
+    if (right < n && heap[right] > heap[largest])
+        largest = right;
  
-    for (int i = 1; i <= n; i++)
-        cout << arr[i] << " ";
-    cout << "\n";
+    if (left < n && heap[left] > heap[largest])
+        largest = left;
  
+    if (largest != i) {
+        swap(heap[i], heap[largest]);
+         heapify(heap, n, largest);
+    }
 }
 
-void addtoheap(int &a, int temp, int* &orderedheap){
-      //cout << "The number that was added to the ordered heap is: " << temp << " the a value is: " << a << endl;
-      orderedheap[a] = temp;
-      a++;
-}
 
-void printOrderedHeap(int* &orderedheap, int n){
-    cout << "Ordered Array \n";
- 
-    for (int i = 0; i < n; i++)
-        cout << orderedheap[i] << " ";
-    cout << "\n";
-}*/
+
