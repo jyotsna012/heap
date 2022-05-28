@@ -45,7 +45,7 @@ for(int b = 1; b <= numelements; b++){
 }
 
     int start = (numelements/2)-1;
-    for (int k = start; k >= 0; k--) {
+    for (int k = start; k >= 1; k--) {
         heapify(heap, numelements, k);
     }
      
