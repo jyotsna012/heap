@@ -43,7 +43,18 @@ cout << "here are the numbers in the heap" << endl;
 for(int b = 1; b <= numelements; b++){
 	cout << heap[b] << endl;
 }
+
+    int start = (numelements/2)-1;
+    for (int k = start; k >= 0; k--) {
+        heapify(arr, numelements, k);
+    }
      
+   cout << "Heap" << endl;
+	
+    for(int b = 1; b <= numelements; b++){
+	cout << heap[b] << endl;
+	}
+
 }
 
 void heapify(int* &heap, int n, int i)
@@ -51,18 +62,19 @@ void heapify(int* &heap, int n, int i)
     int largest = i; 
     int left = (2*i)+1; 
     int right = (2*i)+2; 
-	
     if (right < n && heap[right] > heap[largest])
-        largest = right;
- 
+    largest = right;
     if (left < n && heap[left] > heap[largest])
-        largest = left;
- 
+    largest = left; 
     if (largest != i) {
-        swap(heap[i], heap[largest]);
-         heapify(heap, n, largest);
+     int temp = heap[i];
+    heap[i] = heap[largest];
+     heap[largest] = temp;
+    heapify(heap, n, largest);
     }
 }
+
+
 
 
 
