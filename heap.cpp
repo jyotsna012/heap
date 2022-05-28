@@ -39,8 +39,8 @@ cin.get();
 	    if(myFile.is_open()){
           	for(int i = 1; i <= numelements; i++){
                	int input;
-               	cin >> input;
-               	cin.get();
+               	myFile >> input;
+               	myFile.get();
                	heap[i] = input;
                 }  
 		myFile.close();
