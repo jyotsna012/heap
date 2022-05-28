@@ -15,7 +15,7 @@ int numelements = 0;
 int a = 0;
 int option = 0;
 int* heap = new int[101];
-int* orderedheap = new int[101];
+int j = 0;
 cout << "enter the number of elements you are inputting" << endl;
 cin >> numelements;
 cin.get();
@@ -31,22 +31,25 @@ cin.get();
                heap[i] = input;
           }  
        } else if(option == 2){
-               cout << "option 2" << endl;
-          }  
+      	 fstream myFile;
+	    myFile.open("numbers.txt", ios::in);
+	    if(myFile.is_open()){
+	    	int line;
+		while(getline(myFile, line)){
+			heap[j] = line;
+			j++;
+		}
+		myFile.close();
+	    }          
+     } 
+	
+for(int b = 1; b <= numelements; b++){
+	cout << heap[b] << endl;
+}
      
 }
 
-      /*fstream myFile;
-	    myFile.open("firstNames.txt", ios::in);
-	    if(myFile.is_open()){
-	    	string line;
-		while(getline(myFile, line)){
-			first[i] = line;
-			//cout << line << endl;
-			i++;
-		}
-		myFile.close();
-	    }*/
+
 
 /*int toStart = numelements/2;
 
