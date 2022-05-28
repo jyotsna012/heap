@@ -34,14 +34,16 @@ cin.get();
                heap[i] = input;
           }  
        } else if(option == 2){
-      	 ifstream File;
-		File.open("numbers.txt");
-	        for(int n = 1; n <= numelements; n++){
-		File >> heap[n];
+		ifstream File;
+		File.open("example.txt");
+
+		int n = 0;
+		while (n <= numelements) {
+   		File >> arr[n];
    		n++;
 		}
 		File.close();
-     } 
+     		} 
 	
 for(int b = 1; b <= numelements; b++){
 	cout << heap[b] << endl;
