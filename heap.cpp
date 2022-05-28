@@ -35,7 +35,7 @@ cin.get();
           }  
        } else if(option == 2){
 		ifstream File;
-		File.open("example.txt");
+		File.open("numbers.txt");
 
 		int n = 0;
 		while (n <= numelements) {
