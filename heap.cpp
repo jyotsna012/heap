@@ -13,21 +13,40 @@ int main(){
 
 int numelements = 0;
 int a = 0;
+int option = 0;
 int* heap = new int[101];
 int* orderedheap = new int[101];
 cout << "enter the number of elements you are inputting" << endl;
 cin >> numelements;
 cin.get();
-cout << "please enter your elements below. press enter between each one" << endl;
-cout<< "NUMELEMENTS0: " << numelements << endl;
+cout << "Type 1 below to enter elements maually and type 2 below to upload from a file" << endl;
+cin >> option;
+cin.get();
+     if(option == 1){
+          cout << "please enter your elements below. press enter between each one" << endl;       
+          for(int i = 1; i <= numelements; i++){
+               int input;
+               cin >> input;
+               cin.get();
+               heap[i] = input;
+          }  
+       } else if(option == 2){
+               cout << "option 2" << endl;
+          }  
      
-for(int i = 1; i <= numelements; i++){
-      int input;
-      cin >> input;
-      cin.get();
-      heap[i] = input;
-    }    
 }
+
+      /*fstream myFile;
+	    myFile.open("firstNames.txt", ios::in);
+	    if(myFile.is_open()){
+	    	string line;
+		while(getline(myFile, line)){
+			first[i] = line;
+			//cout << line << endl;
+			i++;
+		}
+		myFile.close();
+	    }*/
 
 /*int toStart = numelements/2;
 
