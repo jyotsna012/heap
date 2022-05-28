@@ -37,11 +37,12 @@ cin.get();
       	 fstream myFile;
 	    myFile.open("numbers.txt", ios::in);
 	    if(myFile.is_open()){
-	    	int line;
-		while(getline(myFile, line)){
-			heap[j] = line;
-			j++;
-		}
+          	for(int i = 1; i <= numelements; i++){
+               	int input;
+               	cin >> input;
+               	cin.get();
+               	heap[i] = input;
+                }  
 		myFile.close();
 	    }          
      } 
