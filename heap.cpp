@@ -14,7 +14,7 @@ int a = 0;
 int option = 0;
 int* heap = new int[101];
 int j = 0;
-cout << "enter the number of elements you are inputting (IT MUST BE MORE THAN 4)" << endl;
+cout << "enter the number of elements you are inputting" << endl;
 cin >> numelements;
 cin.get();
 cout << "Type 1 below to enter elements maually and type 2 below to upload from a file" << endl;
