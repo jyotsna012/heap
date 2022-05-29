@@ -4,18 +4,24 @@
 #include <fstream>
 #include <string>
 
+//function prototypes
 using namespace std;
 void heapify(int* &heap, int n, int i);
 void orderedHeap(int* &heap ,int* &oHeap, int numelements);
 
 int main(){
 
-int a = 0;
+//variables	
+int a = 0;	
 int option = 0;
-int* heap = new int[101];
-int* oHeap = new int[101];
 int j = 0;
 int numelements = 0;
+//array to hold heap	
+int* heap = new int[101];
+// array to hold ordered heap	
+int* oHeap = new int[101];
+
+//asks the user to choose between file input or text input	
 cout << "enter the number of elements you are inputting" << endl;
 cin >> numelements;
 cin.get();
@@ -23,6 +29,7 @@ cout << "Type 1 below to enter elements maually and type 2 below to upload from 
 cin >> option;
 cin.get();
      if(option == 1){
+	  //text input: reads numbers from user and adds to array   
           cout << "please enter your elements below. press enter between each one" << endl;       
           for(int i = 0; i < numelements; i++){
                int input;
@@ -31,6 +38,7 @@ cin.get();
                heap[i] = input;
           }  
        } else if(option == 2){
+	  //file input: reads numbers from file and add   
 		ifstream myFile;
 		myFile.open("numbers.txt");
 		int g = 0;
@@ -40,27 +48,35 @@ cin.get();
 		}
 		myFile.close();
      		} 
-	
+
+//prints out the user input	
 cout << "here are the numbers in the heap" << endl;
 for(int b = 0; b < numelements; b++){
 	cout << heap[b] << endl;
 }
-
+	
+     //creates the heap	
     int start = (numelements/2)-1;
     for (int k = start; k >= 0; k--) {
         heapify(heap, numelements, k);
     }
-     
+   
+   //prints out the max heap in the form of an array	
    cout << "Heap" << endl;
 	
     for(int b = 0; b < numelements; ++b){
 	cout << heap[b] << endl;
 	}
  	
+//calls function to order heap	
 orderedHeap(heap, oHeap,numelements);
 
 
 }
+
+//function to build max heap. 
+//used youtube videos for help in creating algorithim
+//https://www.youtube.com/watch?v=Q_eia3jC9Ts
 
 void heapify(int* &heap, int n, int i)
 {
@@ -79,18 +95,24 @@ void heapify(int* &heap, int n, int i)
     }
 }
 
+//function to order the numbers from high to low
 void orderedHeap(int* &heap ,int* &oHeap, int numelements){
 	
+	//runs as many times as the number of elements
 	for(int b = 0; b < numelements; ++b){
+	    //runs heapify to build max heap each time	
 	    int start = (numelements/2)-1;
     	    for (int k = start; k >= 0; k--) {
        	 	heapify(heap, numelements, k);
             }
+	    //takes the 0th element whihc is always the largest elemenst and move it to ordered heap	
 	    oHeap[b] = heap[0]; 
+	    //set the 0th elelemt equal to zero	
 	    heap[0] = 0;	
 	}
 	    cout << "Ordered Heap" << endl;
 	
+     //print ordered heap
     for(int v = 0; v < numelements; ++v){
 	cout << oHeap[v] << endl;
 	}
