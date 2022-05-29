@@ -9,11 +9,11 @@ void heapify(int* &heap, int n, int i);
 
 int main(){
 
-int numelements = 0;
 int a = 0;
 int option = 0;
 int* heap = new int[101];
 int j = 0;
+int numelements = 0;
 cout << "enter the number of elements you are inputting" << endl;
 cin >> numelements;
 cin.get();
@@ -51,7 +51,7 @@ for(int b = 0; b < numelements; b++){
      
    cout << "Heap" << endl;
 	
-    for(int b = 1; b <= numelements; b++){
+    for(int b = 1; b <= numelements; ++b){
 	cout << heap[b] << endl;
 	}
 
