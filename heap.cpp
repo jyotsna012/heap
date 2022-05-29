@@ -6,12 +6,14 @@
 
 using namespace std;
 void heapify(int* &heap, int n, int i);
+void orderedHeap(int* &heap ,int* &oHeap, int numelements);
 
 int main(){
 
 int a = 0;
 int option = 0;
 int* heap = new int[101];
+int* oHeap = new int[101];
 int j = 0;
 int numelements = 0;
 cout << "enter the number of elements you are inputting" << endl;
@@ -54,6 +56,9 @@ for(int b = 0; b < numelements; b++){
     for(int b = 0; b < numelements; ++b){
 	cout << heap[b] << endl;
 	}
+ 	
+orderedHeap(heap, oHeap,numelements)
+
 
 }
 
@@ -72,6 +77,23 @@ void heapify(int* &heap, int n, int i)
      heap[largest] = temp;
     heapify(heap, n, largest);
     }
+}
+
+void orderedHeap(int* &heap ,int* &oHeap, int numelements){
+	
+	for(int b = 0; b < numelements; ++b){
+	    int start = (numelements/2)-1;
+    	    for (int k = start; k >= 0; k--) {
+       	 	heapify(heap, numelements, k);
+            }
+	    oHeap[i] = heap[0]; 	
+	}
+	    cout << "Ordered Heap" << endl;
+	
+    for(int v = 0; v < numelements; ++v){
+	cout << oHeap[v] << endl;
+	}
+
 }
 
 
