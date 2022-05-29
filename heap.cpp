@@ -57,7 +57,7 @@ for(int b = 0; b < numelements; b++){
 	cout << heap[b] << endl;
 	}
  	
-orderedHeap(heap, oHeap,numelements)
+orderedHeap(heap, oHeap,numelements);
 
 
 }
@@ -86,7 +86,7 @@ void orderedHeap(int* &heap ,int* &oHeap, int numelements){
     	    for (int k = start; k >= 0; k--) {
        	 	heapify(heap, numelements, k);
             }
-	    oHeap[i] = heap[0]; 	
+	    oHeap[b] = heap[0]; 	
 	}
 	    cout << "Ordered Heap" << endl;
 	
