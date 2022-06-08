@@ -103,7 +103,7 @@ void heapify(int* &heap, int n, int i)
     }
 }
 
-
+//asked jennifer for help on visualizing the heap
 void vis(int index, int level, int* &heap, int size)
 {
   
