@@ -47,7 +47,7 @@ cin.get();
     		cin.get();
     		myFile.open(filename);
 	     for(int a = 1; a < numelements; a++){
-      		if(file.eof()){
+      		if(myFile.eof()){
 		break;
       	        }
 	     int in;
