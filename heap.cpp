@@ -110,14 +110,14 @@ void vis(int index, int level, int* &heap, int size)
   if (index < size)
     {
       //left subtree
-      vis((2*index) + 1, level + 1, heap, size);
+      vis((2*index) + 2, level + 1, heap, size);
       for (int i = 0; i < level; i++)
 	{
 	  cout << '\t';
 	}
       cout << heap[index] << endl;
       //right subtree
-      vis((2*index) + 2, level + 1, heap, size);
+      vis((2*index) + 1, level + 1, heap, size);
     }
 }
 
