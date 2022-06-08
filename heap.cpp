@@ -40,7 +40,11 @@ cin.get();
        } else if(option == 2){
 	  //file input: reads numbers from file and add   
 		ifstream myFile;
-		myFile.open("numbers.txt");
+		char filename[20];
+    		cout << "enter file correctly" << endl;
+    		cin >> filename;
+    		cin.get();
+    		myFile.open(filename);
 		int g = 0;
 		while (g < numelements) {
    		myFile >> heap[g];
