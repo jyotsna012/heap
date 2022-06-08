@@ -99,6 +99,26 @@ void heapify(int* &heap, int n, int i)
     }
 }
 
+
+void visualizeHeap(int index, int level, int* &heap, int size)
+{
+  
+  if (index < size)
+    {
+      //left subtree
+      visualizeHeap((2*index) + 1, level + 1);
+      for (int i = 0; i < level; i++)
+	{
+	  cout << '\t';
+	}
+      cout << heap[index] << endl;
+      //right subtree
+      visualizeHeap((2*index) + 2, level + 1);
+    }
+}
+
+
+
 //function to order the numbers from high to low
 void orderedHeap(int* &heap ,int* &oHeap, int numelements){
 	
