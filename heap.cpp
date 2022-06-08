@@ -71,6 +71,9 @@ for(int b = 0; b < numelements; b++){
     for(int b = 0; b < numelements; ++b){
 	cout << heap[b] << endl;
 	}
+	   cout << "Heap vis" << endl;
+
+vis(0,0,heap, numelements);
  	
 //calls function to order heap	
 orderedHeap(heap, oHeap,numelements);
@@ -100,20 +103,20 @@ void heapify(int* &heap, int n, int i)
 }
 
 
-void visualizeHeap(int index, int level, int* &heap, int size)
+void vis(int index, int level, int* &heap, int size)
 {
   
   if (index < size)
     {
       //left subtree
-      visualizeHeap((2*index) + 1, level + 1);
+      vis((2*index) + 1, level + 1);
       for (int i = 0; i < level; i++)
 	{
 	  cout << '\t';
 	}
       cout << heap[index] << endl;
       //right subtree
-      visualizeHeap((2*index) + 2, level + 1);
+      vis((2*index) + 2, level + 1);
     }
 }
 
