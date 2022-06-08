@@ -46,21 +46,12 @@ cin.get();
     		cin >> filename;
     		cin.get();
     		myFile.open(filename);
-	     for(int a = 1; a < numelements; a++){
-      		if(myFile.eof()){
-		break;
-      	        }
+	     for(int a = 0; a < numelements; a++){
 	     int in;
       myFile >> in;
       cout << in << endl;
       heap[a] = in;
 	     }
-		/*int g = 0;
-		while (g < numelements) {
-   		myFile >> heap[g];
-   		g++;
-		}
-		myFile.close();*/
      		} 
 
 //prints out the user input	
