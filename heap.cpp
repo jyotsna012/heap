@@ -8,6 +8,7 @@
 using namespace std;
 void heapify(int* &heap, int n, int i);
 void orderedHeap(int* &heap ,int* &oHeap, int numelements);
+void vis(int index, int level, int* &heap, int size);
 
 int main(){
 
@@ -109,14 +110,14 @@ void vis(int index, int level, int* &heap, int size)
   if (index < size)
     {
       //left subtree
-      vis((2*index) + 1, level + 1);
+      vis((2*index) + 1, level + 1, heap, size);
       for (int i = 0; i < level; i++)
 	{
 	  cout << '\t';
 	}
       cout << heap[index] << endl;
       //right subtree
-      vis((2*index) + 2, level + 1);
+      vis((2*index) + 2, level + 1, heap, size);
     }
 }
 
